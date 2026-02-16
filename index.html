@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="bn">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Valentine?</title>
+  <title>কলিজার টুকরা?</title>
   <style>
     :root{
       --bg:#fff7fb;
@@ -60,7 +60,7 @@
       padding:24px;
     }
     .card{
-      width:min(520px, 94vw);
+      width:min(560px, 94vw);
       background:var(--card);
       border:1px solid rgba(255,77,125,.18);
       border-radius:var(--radius);
@@ -73,9 +73,9 @@
     }
     h1{
       margin:0 0 10px;
-      font-size: clamp(28px, 3.8vw, 44px);
-      line-height:1.05;
-      letter-spacing:-.02em;
+      font-size: clamp(26px, 3.6vw, 42px);
+      line-height:1.15;
+      letter-spacing:-.01em;
     }
     p{
       margin:10px 0 0;
@@ -89,14 +89,14 @@
       gap:12px;
       position:relative;
       padding:18px 0 10px;
-      min-height:78px; /* space for the shy button */
+      min-height:86px;
     }
     button{
       border:0;
       padding:11px 18px;
       border-radius:999px;
       cursor:pointer;
-      font-weight:700;
+      font-weight:800;
       font-size:13px;
       letter-spacing:.02em;
       transition: transform .12s ease, filter .12s ease;
@@ -110,7 +110,6 @@
     }
     .yes:hover{ filter: brightness(1.05); }
 
-    /* NO button is absolute so we can move it */
     .no{
       background:#fff;
       color:var(--text);
@@ -130,11 +129,10 @@
     .screen{ display:none; }
     .screen.active{ display:block; }
 
-    /* terms screen */
     .terms{
       text-align:left;
       margin:14px auto 0;
-      width:min(420px, 92%);
+      width:min(460px, 92%);
       background:#ffffffb8;
       border:1px solid rgba(255,77,125,.14);
       border-radius:18px;
@@ -144,22 +142,22 @@
       margin:2px 0 10px;
       font-size:13px;
       color:#111827;
-      font-weight:800;
+      font-weight:900;
     }
     .terms ul{
       margin:0;
       padding-left:18px;
       color:#374151;
       font-size:13px;
-      line-height:1.5;
+      line-height:1.55;
     }
     .terms li{ margin:6px 0; }
     .agreeWrap{ margin-top:16px; }
 
-    /* final screen */
     .yay{
-      font-size: clamp(30px, 4.2vw, 46px);
+      font-size: clamp(26px, 4.0vw, 44px);
       margin-bottom:6px;
+      font-weight:900;
     }
     .sticker{
       width:140px;
@@ -194,53 +192,62 @@
 <body>
   <div class="wrap">
     <div class="card">
+
       <!-- Screen 1 -->
       <div class="screen active" id="s1">
-        <h1>Will you be my<br/>Valentine?</h1>
+        <h1>কি অবস্থা কলিজার টুকরা<br/>কেমন আছো?</h1>
+
         <div class="btnRow" id="arena">
-          <button class="yes" id="yes1">YES</button>
-          <button class="no" id="noBtn">NO</button>
+          <button class="yes" id="yes1">ভালো আছি</button>
+          <button class="no" id="noBtn">ভালো নেই</button>
         </div>
-        <div class="hint">Hint: The “No” button is a bit shy… <span class="tinyHeart">❤</span></div>
+
+        <div class="hint">“ভালো নেই” বাটনটা চাপার চেষ্টা করো… <span class="tinyHeart">❤</span></div>
       </div>
 
       <!-- Screen 2 -->
       <div class="screen" id="s2">
-        <p style="margin:0 0 10px; font-weight:800; color:#111827;">By clicking YES you agree to:</p>
+        <p style="margin:0 0 10px; font-weight:900; color:#111827;">
+          “ভালো আছি” চাপলে তুমি মেনে নিচ্ছো যে—
+        </p>
+
         <div class="terms">
-          <h3>Terms & tiny promises</h3>
+          <h3>ছোট্ট কিছু শর্ত (ভালোবাসার 😄)</h3>
           <ul>
-            <li>Unlimited cuddles, surprise hugs & soft kisses</li>
-            <li>Random chocolates, stolen hoodies & shared desserts</li>
-            <li>Listening, understanding & never invalidating your feelings</li>
-            <li>Growing together — dreams, struggles & everything in between</li>
-            <li>Being deeply loved by someone who’s serious about you</li>
+            <li>আজ থেকে তোমার হাসি আমার✨</li>
+            <li>রাগ করলে একটু আদর করে মানিয়ে দিতে হবে 😌</li>
+            <li>তোমার খেয়াল—আমি রাখবো বেশি বেশি 💞</li>
+            <li>চা/কফি/আইসক্রিম—সব শেয়ার হবে 🍫</li>
+            <li>দিন শেষে একটাই কথা: “তুমি আমার” 🫶</li>
+            <li>তোমার বর তোমাকে এত এত গুলা ভালোবাসে 🫶</li>
           </ul>
-          <p class="small">Effective immediately!</p>
+          <p class="small">এটা lifetime validity 😎</p>
         </div>
+
         <div class="agreeWrap">
-          <button class="yes" id="agree">YES, I agree!</button>
+          <button class="yes" id="agree">ঠিক আছে, মেনে নিলাম!</button>
         </div>
       </div>
 
       <!-- Screen 3 -->
       <div class="screen" id="s3">
-        <div class="yay">Yay! 🎉<br/>Good Choice!</div>
+        <div class="yay">ইয়েইই! 🥳<br/>তাহলে ডিল পাকা মহারাণী!</div>
         <div class="sticker">🫶</div>
-        <p>That’s the best decision you have ever made! <span class="tinyHeart">❤</span></p>
-        <div class="footerNote">Made with love + code</div>
+        <p>এখন থেকে তুমি শুধুই আমার...বুঝা গেছে ব্যাপার টা  <span class="tinyHeart">❤</span></p>
+        <div class="footerNote">Made by your husband</div>
       </div>
+
     </div>
   </div>
 
   <script>
-    // ---------- hearts background ----------
-    const heartsPerSecond = 2.2; // adjust
+    // floating hearts
+    const heartsPerSecond = 2.2;
     function spawnHeart(){
       const h = document.createElement("div");
       h.className = "heart";
       const size = 10 + Math.random()*16;
-      const left = Math.random()*100; // vw
+      const left = Math.random()*100;
       const dur = 4 + Math.random()*4.5;
       const opacity = 0.35 + Math.random()*0.55;
 
@@ -250,7 +257,6 @@
       h.style.opacity = opacity;
       h.style.animationDuration = dur + "s";
 
-      // slight color variation
       const palette = ["#ff4d7d","#ff2f6d","#ff6aa0","#e11d48"];
       h.style.background = palette[Math.floor(Math.random()*palette.length)];
 
@@ -259,13 +265,13 @@
     }
     setInterval(spawnHeart, 1000/heartsPerSecond);
 
-    // ---------- screen switch ----------
+    // screen switch
     function show(id){
       document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));
       document.getElementById(id).classList.add("active");
     }
 
-    // ---------- shy NO button ----------
+    // shy "ভালো নেই" button
     const arena = document.getElementById("arena");
     const noBtn = document.getElementById("noBtn");
 
@@ -276,7 +282,6 @@
       const maxX = rect.width - btnRect.width;
       const maxY = rect.height - btnRect.height;
 
-      // keep inside arena (with padding)
       const x = 8 + Math.random() * Math.max(0, maxX - 16);
       const y = 8 + Math.random() * Math.max(0, maxY - 16);
 
@@ -285,16 +290,14 @@
       noBtn.style.right = "auto";
     }
 
-    // On hover (desktop) + on touch/click (mobile)
     noBtn.addEventListener("mouseenter", moveNo);
     noBtn.addEventListener("click", (e)=>{ e.preventDefault(); moveNo(); });
     noBtn.addEventListener("touchstart", (e)=>{ e.preventDefault(); moveNo(); }, {passive:false});
 
-    // ---------- button actions ----------
+    // actions
     document.getElementById("yes1").addEventListener("click", ()=> show("s2"));
     document.getElementById("agree").addEventListener("click", ()=> show("s3"));
 
-    // optional: start NO button in a random spot
     setTimeout(moveNo, 250);
   </script>
 </body>
